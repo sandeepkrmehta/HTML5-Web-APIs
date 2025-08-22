@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Web APIs Showcase</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>HTML5 Web APIs Showcase</h1>
+        <p class="subtitle">Explore the power of modern browser APIs with these interactive demonstrations</p>
+    </header>
+    
+    <div class="container">
+        <!-- Geolocation API -->
+        <section class="api-section">
+            <h2 class="api-title">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Geolocation API
+            </h2>
+            <p class="api-description">Get the user's current position and display it on a map. Requires location permission.</p>
+            <div class="demo-area">
+                <button id="get-location">Get My Location</button>
+                <div class="output" id="location-output">Location data will appear here...</div>
+                <div class="geolocation-data" id="location-data" style="display: none;">
+                    <div class="data-item">
+                        <div>Latitude</div>
+                        <div class="data-value" id="latitude">--</div>
+                    </div>
+                    <div class="data-item">
+                        <div>Longitude</div>
+                        <div class="data-value" id="longitude">--</div>
+                    </div>
+                    <div class="data-item">
+                        <div>Accuracy</div>
+                        <div class="data-value" id="accuracy">--</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Vibration API -->
+        <section class="api-section">
+            <h2 class="api-title">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                </svg>
+                Vibration API
+            </h2>
+            <p class="api-description">Make the device vibrate with different patterns. Works on mobile devices and some browsers.</p>
+            <div class="demo-area">
+                <div class="vibration-buttons">
+                    <button id="vibrate-single">Short Vibration</button>
+                    <button id="vibrate-pattern">Vibration Pattern</button>
+                    <button id="vibrate-stop">Stop Vibration</button>
+                </div>
+                <div class="output">Try these on a mobile device or compatible browser</div>
+            </div>
+        </section>
+        
+        <!-- Battery API -->
+        <section class="api-section">
+            <h2 class="api-title">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                Battery API
+            </h2>
+            <p class="api-description">Get information about the device's battery status and level.</p>
+            <div class="demo-area">
+                <button id="get-battery">Get Battery Info</button>
+                <div class="output" id="battery-output">Battery data will appear here...</div>
+                <div class="battery-data" id="battery-data" style="display: none;">
+                    <div class="data-item">
+                        <div>Level</div>
+                        <div class="data-value" id="battery-level">--</div>
+                        <div class="battery-level">
+                            <div class="battery-fill" id="battery-fill" style="width: 0%;">0%</div>
+                        </div>
+                    </div>
+                    <div class="data-item">
+                        <div>Charging</div>
+                        <div class="data-value" id="battery-charging">--</div>
+                    </div>
+                    <div class="data-item">
+                        <div>Charging Time</div>
+                        <div class="data-value" id="battery-charging-time">--</div>
+                    </div>
+                    <div class="data-item">
+                        <div>Discharging Time</div>
+                        <div class="data-value" id="battery-discharging-time">--</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Notifications API -->
+        <section class="api-section">
+            <h2 class="api-title">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                </svg>
+                Notifications API
+            </h2>
+            <p class="api-description">Request permission and display browser notifications.</p>
+            <div class="demo-area">
+                <div class="notification-buttons">
+                    <button id="request-permission">Request Permission</button>
+                    <button id="show-notification">Show Notification</button>
+                </div>
+                <div class="output" id="notification-output">Notification status will appear here...</div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>HTML5 Web APIs Demo &copy; 2023 | Modern Browser Features</p>
+    </footer>
+
+
+</body>
+</html>
